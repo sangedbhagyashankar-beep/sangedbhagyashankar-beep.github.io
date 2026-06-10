@@ -151,15 +151,16 @@
   }
   .hero-name {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(1.4rem, 6vw, 6rem);
+    font-size: clamp(1.1rem, 5vw, 6rem);
     font-weight: 800;
     line-height: 1.0;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
     animation: fadeUp 0.8s 0.1s ease both;
     white-space: nowrap;
-    overflow: hidden;
+    overflow: visible;
     max-width: 100%;
+    width: 100%;
   }
   .hero-name .gradient-text {
     background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 60%, var(--accent3) 100%);
@@ -639,12 +640,13 @@
 
     /* Hero name — scale to fit one line on mobile */
     .hero-name {
-      font-size: clamp(1.3rem, 8vw, 2.8rem);
-      letter-spacing: -0.04em;
+      font-size: clamp(1rem, 7.5vw, 2.4rem);
+      letter-spacing: -0.03em;
       white-space: nowrap;
-      overflow: hidden;
+      overflow: visible;
       max-width: 100%;
       width: 100%;
+      display: block;
     }
 
     #hero {
@@ -686,9 +688,16 @@
     .section-title { font-size: clamp(1.6rem, 6vw, 2.5rem); }
   }
 
-  @media(max-width:400px) {
+  @media(max-width:480px) {
     .hero-name {
-      font-size: clamp(1.1rem, 8.5vw, 1.8rem);
+      font-size: clamp(0.95rem, 7vw, 1.6rem);
+      letter-spacing: -0.04em;
+      overflow: visible;
+    }
+  }
+  @media(max-width:360px) {
+    .hero-name {
+      font-size: clamp(0.85rem, 6.5vw, 1.4rem);
       letter-spacing: -0.05em;
     }
   }
